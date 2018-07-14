@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Will McAfee eat his own dick API documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid" style="text-align: center">
+        <h1> Will McAfee eat his own dick ?</h1>
+        <h2>Public REST API</h2>
+        <br><br>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row">URL</th>
+                    <td>{{ url }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Method</th>
+                    <td>GET</td>
+                </tr>
+                <tr>
+                    <th scope="row">Success Response</th>
+                    <td>
+                        Status Code: <b>200</b><br>
+                        Content: See Below
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Error Response</th>
+                    <td>
+                        Status Code: <b>500</b><br>
+                        Content: {'code':500,'error':'cryptocompare error','content':<b>the json fetched from the cryptocompare api</b>}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <h2>Success Response Content</h2>
+        <h5>And what to do with it...</h5>
+        <br><br>
+        <div class="card mx-auto" style="width: 50rem;">
+            <div class="card-header">
+                <h4>Example Response</h4><button class="btn btn-primary" style="float:right;" id="update">Update!</button>
+            </div>
+            <div class="card-body"><pre><code><a id="response">{{ example }}</a></code></pre></div>
+        </div>
+        <br><br>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="row">isdickonthemenu</th>
+                    <td><code>Yes!,No!,Maybe?</code> Will McAfee eat his own dick ?</td>
+                </tr>
+                <tr>
+                    <th scope="row">current_price</th>
+                    <td>The current BTC price as fetched from cryptocompare</td>
+                </tr>
+                <tr>
+                    <th scope="row">tweet_price</th>
+                    <td>The BTC price at the time of the tweet ($2244.265)</td>
+                </tr>
+                <tr>
+                    <th scope="row">goal_rate</th>
+                    <td>goal rate for three years based on starting bpi*</td>
+                </tr>
+                <tr>
+                    <th scope="row">days_elapsed</th>
+                    <td>Days elapsed from the day of the tweet (07/17/17)</td>
+                </tr>
+                <tr>
+                    <th scope="row">days_elapsed</th>
+                    <td>Days remaining for the bet to end (12/31/20)</td>
+                </tr>
+                <tr>
+                    <th scope="row">parity_price</th>
+                    <td>The price BTC needs to be around to for McAfee to win the bet*</td>
+                </tr>
+                <tr>
+                    <th scope="row">difference_percent</th>
+                    <td>Parity price as a difference percentage</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="float: left;"> <b>*<a href="https://github.com/diegorod/WillMcAfeeEatHisOwnDick">Click here for more info on how these are determined</a></b></div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#update").click(function(){
+                $.get('/',function(data){
+                    console.log(data)
+                    $("#response").html(data.stringify)
+                });
+            });
+        });
+    </script>
+  </body>
+</html>
