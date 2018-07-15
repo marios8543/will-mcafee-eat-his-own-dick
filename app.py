@@ -50,7 +50,7 @@ def index():
 
 @app.route('/help')
 def help():
-    return flask.render_template('help.html',url=app.static_url_path,example=mcafee()['c'])
+    return flask.render_template('help.html',example=mcafee()['c'])
 
 if __name__=='__main__':
     app.run(debug=True)     
