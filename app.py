@@ -1,7 +1,7 @@
 import flask
 import requests
 from datetime import datetime
-app = flask.Flask(__name__)
+app = flask.Flask(__name__,static_url_path='https://will-mcafee-eat-his-own-dick.herokuapp.com/')
 
 def mcafee():
     coin_json=requests.get('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,EUR')
