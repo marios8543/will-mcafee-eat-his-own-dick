@@ -20,8 +20,8 @@ def mcafee():
         isdickonthemenu = "No!"
     else:
         isdickonthemenu = "Yes!"
-    pprice = "%.2f" % pprice
-    pdiff = "%.2f" % pdiff
+    pprice = float("%.2f" % pprice)
+    pdiff = float("%.2f" % pdiff)
     return {
         's':'s',
         'c':{
