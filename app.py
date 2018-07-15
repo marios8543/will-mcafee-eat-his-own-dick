@@ -24,20 +24,20 @@ def mcafee():
     pdiff = "%.2f" % pdiff
     return {
         's':'s',
-        'c':{      
-    'info':[
-        "Will McAfee eat his own dick Public API by marios8543. Based on diegorod's algorithm",
-        'More info on https://github.com/marios8543/will-mcafee-eat-his-own-dick/blob/master/README.md'
-    ],
-        'isdickonthemenu':isdickonthemenu,
-        'current_price':bpi,
-        'tweet_price':tbpi,
-        'goal_rate':grate,
-        'days_elapsed':days_elapsed,
-        'days_remaining':days_left,
-        'parity_price':pprice,
-        'difference_percent':pdiff
-    }
+        'c':{
+            'isdickonthemenu':isdickonthemenu,
+            'current_price':bpi,
+            'tweet_price':tbpi,
+            'goal_rate':grate,
+            'days_elapsed':days_elapsed,
+            'days_remaining':days_left,
+            'parity_price':pprice,
+            'difference_percent':pdiff,
+            'info':{
+                'docs':'https://will-mcafee-eat-his-own-dick.herokuapp.com/help',
+                'github':'https://github.com/marios8543/will-mcafee-eat-his-own-dick'
+            }
+        }
     }
 
 @app.route('/')
