@@ -1,5 +1,5 @@
 Flask==0.12.0
-Jinja2==2.8.1
+Jinja2>=2.10.1
 gunicorn==19.6.0
 crtauth>=0.99.3
 requests>=2.7.0
